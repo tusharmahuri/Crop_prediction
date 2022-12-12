@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Tushar Predict Your chances for Admission</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="N" id="N" placeholder="N">
+            <input type="number" name="P" id="P" placeholder="P">
+            <input type="number" name="K" id="K" placeholder="K">
+            <input type="number" name="temperature" id="temperature" placeholder="temperature">
+            <input type="number" name="humidity" id="humidity" placeholder="humidity">
+            <input type="number" name="ph" id="ph"placeholder="ph" step="any">
+            <input type="number" name="rainfall" id="rainfall"placeholder="rainfall" step="any">
+
+</select>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
